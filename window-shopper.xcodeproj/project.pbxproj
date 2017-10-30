@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2BFA789A1FA0FB0A008A600C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA78991FA0FB0A008A600C /* AppDelegate.swift */; };
-		2BFA789C1FA0FB0A008A600C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA789B1FA0FB0A008A600C /* ViewController.swift */; };
+		2BFA789C1FA0FB0A008A600C /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA789B1FA0FB0A008A600C /* MainVC.swift */; };
 		2BFA789F1FA0FB0A008A600C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA789D1FA0FB0A008A600C /* Main.storyboard */; };
 		2BFA78A11FA0FB0A008A600C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA78A01FA0FB0A008A600C /* Assets.xcassets */; };
 		2BFA78A41FA0FB0A008A600C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA78A21FA0FB0A008A600C /* LaunchScreen.storyboard */; };
 		2BFA78AF1FA0FB0A008A600C /* window_shopperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA78AE1FA0FB0A008A600C /* window_shopperTests.swift */; };
 		2BFA78BA1FA0FB0A008A600C /* window_shopperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA78B91FA0FB0A008A600C /* window_shopperUITests.swift */; };
+		2BFA78CA1FA10BC8008A600C /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFA78C91FA10BC8008A600C /* CurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		2BFA78961FA0FB0A008A600C /* window-shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "window-shopper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFA78991FA0FB0A008A600C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2BFA789B1FA0FB0A008A600C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BFA789B1FA0FB0A008A600C /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		2BFA789E1FA0FB0A008A600C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BFA78A01FA0FB0A008A600C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BFA78A31FA0FB0A008A600C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		2BFA78B51FA0FB0A008A600C /* window-shopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "window-shopperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFA78B91FA0FB0A008A600C /* window_shopperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = window_shopperUITests.swift; sourceTree = "<group>"; };
 		2BFA78BB1FA0FB0A008A600C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BFA78C91FA10BC8008A600C /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,9 @@
 		2BFA78981FA0FB0A008A600C /* window-shopper */ = {
 			isa = PBXGroup;
 			children = (
+				2BFA78C81FA10B84008A600C /* Views */,
+				2BFA78C71FA0FE89008A600C /* Controller */,
 				2BFA78991FA0FB0A008A600C /* AppDelegate.swift */,
-				2BFA789B1FA0FB0A008A600C /* ViewController.swift */,
 				2BFA789D1FA0FB0A008A600C /* Main.storyboard */,
 				2BFA78A01FA0FB0A008A600C /* Assets.xcassets */,
 				2BFA78A21FA0FB0A008A600C /* LaunchScreen.storyboard */,
@@ -123,6 +126,22 @@
 				2BFA78BB1FA0FB0A008A600C /* Info.plist */,
 			);
 			path = "window-shopperUITests";
+			sourceTree = "<group>";
+		};
+		2BFA78C71FA0FE89008A600C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2BFA789B1FA0FB0A008A600C /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2BFA78C81FA10B84008A600C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2BFA78C91FA10BC8008A600C /* CurrencyTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BFA789C1FA0FB0A008A600C /* ViewController.swift in Sources */,
+				2BFA78CA1FA10BC8008A600C /* CurrencyTextField.swift in Sources */,
+				2BFA789C1FA0FB0A008A600C /* MainVC.swift in Sources */,
 				2BFA789A1FA0FB0A008A600C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
