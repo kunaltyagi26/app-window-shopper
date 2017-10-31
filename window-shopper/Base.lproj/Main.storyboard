@@ -33,24 +33,23 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="925-3X-mQo">
-                                <rect key="frame" x="62.5" y="155" width="250" height="120"/>
+                                <rect key="frame" x="50" y="155" width="275" height="119"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Your Hourly Wage" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQ0-8J-FKd" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Hourly Wage" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQ0-8J-FKd" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="49.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Item Price" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-aK-tZy" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="70" width="250" height="50"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Price" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vsx-aK-tZy" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="69.5" width="275" height="49.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="3nT-cx-oH6"/>
-                                    <constraint firstAttribute="height" constant="120" id="xqe-r7-f6M"/>
+                                    <constraint firstAttribute="height" constant="119" id="xqe-r7-f6M"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -60,13 +59,19 @@
                             <constraint firstItem="925-3X-mQo" firstAttribute="top" secondItem="Sia-Q0-cs4" secondAttribute="bottom" constant="40" id="JxY-JZ-ZLW"/>
                             <constraint firstItem="vuu-CK-x1p" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fgs-OM-NTg"/>
                             <constraint firstItem="vuu-CK-x1p" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g85-6e-xQS"/>
+                            <constraint firstItem="925-3X-mQo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="gPT-KV-O5I"/>
                             <constraint firstItem="Sia-Q0-cs4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="ivw-y5-XP6"/>
                             <constraint firstItem="vuu-CK-x1p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lJV-fx-a85"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="925-3X-mQo" secondAttribute="trailing" constant="50" id="llD-Ko-3Uq"/>
                             <constraint firstItem="vuu-CK-x1p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="owq-YV-cqc"/>
                             <constraint firstItem="925-3X-mQo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wfn-sJ-bRW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="priceTxt" destination="Vsx-aK-tZy" id="gdE-uh-ll6"/>
+                        <outlet property="wageTxt" destination="oQ0-8J-FKd" id="QlK-ol-1VU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
